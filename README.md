@@ -2,6 +2,18 @@
 
 KeyBase is a comprehensive Java Swing application designed to manage key duplicator records with an embedded H2 database. It provides a complete solution for key shops to track customer information, key details, and maintain visual records through webcam integration.
 
+GitHub Pages
+------------
+
+This repository includes a small GitHub Pages site in the <code>docs/</code> directory. A GitHub Actions workflow (<code>.github/workflows/pages.yml</code>) is included and will automatically publish that directory to GitHub Pages on every push to <code>main</code>.
+
+Expected site URL:
+
+https://SamSunny4.github.io/KeyBase-Releases/
+
+If you prefer to publish manually, go to the repository Settings → Pages and set the source to <code>main /docs</code>.
+
+
 > Recent updates (2025): Portable JRE bundling (no Java install needed), enhanced image staging (captures preview immediately but only committed on save), service/payment tagging, and improved search filters.
 
 ## Features
