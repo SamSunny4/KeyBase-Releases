@@ -9,8 +9,7 @@ This repository includes a small GitHub Pages site in the <code>docs/</code> dir
 
 Expected site URL:
 
-https://SamSunny4.github.io/KeyBase-Releases/
-
+https://samsunny4.github.io/KeyBase-Releases/index.html
 If you prefer to publish manually, go to the repository Settings → Pages and set the source to <code>main /docs</code>.
 
 
