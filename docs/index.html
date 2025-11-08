@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KeyBase — Professional Key Shop Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/splash.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo-section">
+        <img src="images/splash.png" alt="KeyBase Logo" class="logo">
+        <div class="brand">
+          <h1>KeyBase</h1>
+          <p class="tagline">Professional Key Shop Management System</p>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a href="#docs">Documentation</a>
+        <a href="https://github.com/SamSunny4/KeyBase-Releases" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Fast, Form-Driven Desktop App for Key Duplication Shops</h2>
+      <p class="hero-subtitle">Streamline your locksmith workflow with fast data entry, image capture, printing, search, and Excel export — all in one lightweight Java application.</p>
+      <div class="cta-buttons">
+        <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/latest" class="btn btn-primary">Download Latest Release</a>
+        <a href="https://github.com/SamSunny4/KeyBase-Releases" class="btn btn-secondary">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="overview" class="content-section">
+      <h2>Overview</h2>
+      <p>KeyBase is a comprehensive desktop application built with Java Swing that revolutionizes key-duplication shop record management. With an embedded H2 database, keyboard-driven interface, and integrated webcam support, KeyBase delivers everything you need for efficient shop operations.</p>
+      <div class="highlights">
+        <div class="highlight-card">
+          <div class="highlight-icon">⚡</div>
+          <h3>Lightning Fast</h3>
+          <p>Keyboard shortcuts and smart navigation make data entry effortless</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">📸</div>
+          <h3>Image Capture</h3>
+          <p>Integrated webcam support with instant preview and smart caching</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">🔍</div>
+          <h3>Powerful Search</h3>
+          <p>Advanced filtering by date, type, service, payment method and more</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">📊</div>
+          <h3>Export & Print</h3>
+          <p>Generate Excel reports and formatted printouts with summaries</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="content-section features-section">
+      <h2>Key Features</h2>
+      
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>📝 Complete Record Management</h3>
+          <ul>
+            <li>Customer Name, Phone (10-digit validated), Vehicle No, ID No</li>
+            <li>Key No/Model, Key Type (Vehicles, Bike, Car, etc.)</li>
+            <li>Purpose, Remarks, Quantity, Amount, Date</li>
+            <li>Service Type: Duplicate, In-shop, On-site</li>
+            <li>Payment tracking: Cash or UPI with auto-annotations</li>
+          </ul>
+        </div>
+
+        <div class="feature-item">
+          <h3>⌨️ Keyboard-Driven Workflow</h3>
+          <ul>
+            <li><kbd>Ctrl+S</kbd> — Save record</li>
+            <li><kbd>Ctrl+F</kbd> — Open search</li>
+            <li><kbd>Ctrl+E</kbd> — Export to Excel</li>
+            <li><kbd>Ctrl+P</kbd> — Print today's records</li>
+            <li><kbd>Enter</kbd> — Navigate between fields</li>
+          </ul>
+        </div>
+
+        <div class="feature-item">
+          <h3>📷 Smart Image Management</h3>
+          <ul>
+            <li>Integrated webcam capture with live preview</li>
+            <li>Temporary cache (committed only on save)</li>
+            <li>Recapture and delete options</li>
+            <li>Automatic placeholder images when missing</li>
+            <li>Configurable camera disable option</li>
+          </ul>
+        </div>
+
+        <div class="feature-item">
+          <h3>🔎 Advanced Search & Filter</h3>
+          <ul>
+            <li>Search across all fields or specific columns</li>
+            <li>Date range filtering</li>
+            <li>Key type and purpose filters</li>
+            <li>Service type and payment method filters</li>
+            <li>Case-insensitive substring matching</li>
+          </ul>
+        </div>
+
+        <div class="feature-item">
+          <h3>🖨️ Professional Printing</h3>
+          <ul>
+            <li>Formatted reports with customer photos</li>
+            <li>Daily summary (count, quantity, total amount)</li>
+            <li>Individual record printing</li>
+            <li>Print timestamp in footer</li>
+            <li>Standard printer dialog integration</li>
+          </ul>
+        </div>
+
+        <div class="feature-item">
+          <h3>📤 Flexible Export Options</h3>
+          <ul>
+            <li>Full database export to Excel (XLSX)</li>
+            <li>Filtered search results export</li>
+            <li>Single record CSV export</li>
+            <li>Configurable columns and formatting</li>
+            <li>Typed cells with appropriate widths</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="content-section download-section">
+      <h2>Download & Installation</h2>
+      <div class="download-info">
+        <div class="download-card">
+          <h3>🪟 Windows Installer</h3>
+          <p>Portable JRE bundled — no Java installation required!</p>
+          <p class="system-req">Requirements: Windows 64-bit, ~250MB free space</p>
+          <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/latest" class="btn btn-primary">Download KeyBase-Setup.exe</a>
+        </div>
+        <div class="download-steps">
+          <h3>Quick Start</h3>
+          <ol>
+            <li>Download <strong>KeyBase-Setup.exe</strong> from the latest release</li>
+            <li>Run the installer (portable JRE included)</li>
+            <li>Launch KeyBase — double-click <code>KeyBase.exe</code></li>
+            <li>Start adding records with fast keyboard navigation!</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs" class="content-section">
+      <h2>Documentation & Support</h2>
+      <div class="docs-grid">
+        <div class="doc-card">
+          <h3>📖 Full Documentation</h3>
+          <p>Complete user guide with screenshots, keyboard shortcuts, troubleshooting, and best practices.</p>
+          <a href="https://github.com/SamSunny4/KeyBase-Releases/blob/main/README.md" class="btn btn-secondary">Read README</a>
+        </div>
+        <div class="doc-card">
+          <h3>🛠️ Technical Details</h3>
+          <p>Architecture: Java 17, Swing UI, H2 embedded database, webcam-capture library integration.</p>
+          <a href="https://github.com/SamSunny4/KeyBase-Releases" class="btn btn-secondary">View Repository</a>
+        </div>
+        <div class="doc-card">
+          <h3>📦 Latest Releases</h3>
+          <p>Download installers, view version history, and access release notes.</p>
+          <a href="https://github.com/SamSunny4/KeyBase-Releases/releases" class="btn btn-secondary">Browse Releases</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section tech-section">
+      <h2>Built With Modern Technologies</h2>
+      <div class="tech-badges">
+        <span class="badge">Java 17 (LTS)</span>
+        <span class="badge">Swing GUI</span>
+        <span class="badge">H2 Database</span>
+        <span class="badge">Webcam Capture</span>
+        <span class="badge">Apache POI (Excel)</span>
+        <span class="badge">ZXing (QR Codes)</span>
+        <span class="badge">Launch4j</span>
+        <span class="badge">Inno Setup</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="images/splash.png" alt="KeyBase" class="footer-logo">
+          <p><strong>KeyBase</strong> — Professional Key Shop Management</p>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/SamSunny4/KeyBase-Releases">GitHub Repository</a></li>
+            <li><a href="https://github.com/SamSunny4/KeyBase-Releases/releases">Download Releases</a></li>
+            <li><a href="https://github.com/SamSunny4/KeyBase-Releases/blob/main/README.md">Documentation</a></li>
+            <li><a href="https://github.com/SamSunny4/KeyBase-Releases/issues">Report Issues</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <h4>About</h4>
+          <p>Fast, form-driven desktop app for managing key-duplication shop records with image capture, printing, search, and Excel export.</p>
+          <p class="license">Licensed under MIT License</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 KeyBase Project. Published via GitHub Pages.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
