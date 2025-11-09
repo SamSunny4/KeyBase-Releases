@@ -518,12 +518,12 @@ kbd {
 }
 
 .mk-logo {
-  max-width: 150px;
+  max-width: 50px;
   height: auto;
   margin-top: 12px;
   border-radius: 8px;
   background: white;
-  padding: 8px;
+  padding: 4px;
 }
 
 .footer-bottom {
