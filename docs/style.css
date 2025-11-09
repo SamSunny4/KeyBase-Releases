@@ -487,6 +487,45 @@ kbd {
   color: #64748b !important;
 }
 
+.footer-contact {
+  text-align: left;
+}
+
+.footer-contact p {
+  font-size: 15px;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.footer-contact strong {
+  color: white;
+}
+
+.contact-phone {
+  font-size: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.contact-phone a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.contact-phone a:hover {
+  color: #60a5fa;
+}
+
+.mk-logo {
+  max-width: 150px;
+  height: auto;
+  margin-top: 12px;
+  border-radius: 8px;
+  background: white;
+  padding: 8px;
+}
+
 .footer-bottom {
   border-top: 1px solid #334155;
   padding-top: 20px;
