@@ -49,7 +49,12 @@
           <p>Keyboard shortcuts and smart navigation make data entry effortless</p>
         </div>
         <div class="highlight-card">
-          <div class="highlight-icon">📸</div>
+          <div class="highlight-icon">�</div>
+          <h3>Sales Analytics</h3>
+          <p>Interactive charts with day/month/year insights and real-time metrics</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">�📸</div>
           <h3>Image Capture</h3>
           <p>Integrated webcam support with instant preview and smart caching</p>
         </div>
@@ -81,6 +86,18 @@
           </ul>
         </div>
 
+        <div class="feature-item feature-highlight">
+          <h3>📈 Sales Analytics Dashboard</h3>
+          <ul>
+            <li>Interactive charts with gradient fills and hover tooltips</li>
+            <li>View metrics by Day, Month, or Year with easy navigation</li>
+            <li>Track Total Sales, Sales by Key Type, Purpose, and Quantity</li>
+            <li>Modern teal gradient UI with Segoe UI typography</li>
+            <li>Real-time insights to grow your business</li>
+          </ul>
+          <img src="images/graphwindow.png" alt="Sales Analytics Dashboard" class="feature-preview">
+        </div>
+
         <div class="feature-item">
           <h3>⌨️ Keyboard-Driven Workflow</h3>
           <ul>
@@ -96,7 +113,7 @@
           <h3>📷 Smart Image Management</h3>
           <ul>
             <li>Integrated webcam capture with live preview</li>
-            <li>Temporary cache (committed only on save)</li>
+            <li>Deferred commit: stage images before saving</li>
             <li>Recapture and delete options</li>
             <li>Automatic placeholder images when missing</li>
             <li>Configurable camera disable option</li>
@@ -115,24 +132,12 @@
         </div>
 
         <div class="feature-item">
-          <h3>🖨️ Professional Printing</h3>
+          <h3>🖨️ Professional Output</h3>
           <ul>
-            <li>Formatted reports with customer photos</li>
-            <li>Daily summary (count, quantity, total amount)</li>
-            <li>Individual record printing</li>
-            <li>Print timestamp in footer</li>
-            <li>Standard printer dialog integration</li>
-          </ul>
-        </div>
-
-        <div class="feature-item">
-          <h3>📤 Flexible Export Options</h3>
-          <ul>
-            <li>Full database export to Excel (XLSX)</li>
-            <li>Filtered search results export</li>
-            <li>Single record CSV export</li>
-            <li>Configurable columns and formatting</li>
-            <li>Typed cells with appropriate widths</li>
+            <li>Export to Excel with formatted columns and charts</li>
+            <li>Print formatted reports with customer photos</li>
+            <li>Daily summaries with totals and statistics</li>
+            <li>Single record or batch export options</li>
           </ul>
         </div>
       </div>
@@ -193,92 +198,102 @@
       <div class="install-steps">
         <h3>Step-by-Step Installation Instructions</h3>
         
-        <div class="step-item">
-          <div class="step-number">Step 1</div>
-          <div class="step-content">
-            <h4>Download KeyBase Setup</h4>
-            <p>Click the download button above or visit the <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/latest" target="_blank">GitHub Releases page</a> and download <strong>KeyBase-Setup.exe</strong>. Save the file to your computer.</p>
+        <div class="steps-row">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Download Setup</h4>
+              <p>Download <strong>KeyBase-Setup.exe</strong> from the <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/latest" target="_blank">releases page</a>.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Bypass Security Warning</h4>
+              <p>Click <strong>"More info"</strong> then <strong>"Run anyway"</strong> on the Windows warning.</p>
+              <img src="images/Windows_warning.png" alt="Windows Warning" class="step-image">
+            </div>
           </div>
         </div>
 
-        <div class="step-item">
-          <div class="step-number">Step 2</div>
-          <div class="step-content">
-            <h4>Bypass Windows Security Warning</h4>
-            <p>Double-click <strong>KeyBase-Setup.exe</strong> to start the installation. Windows will show a security warning: "Windows protected your PC". Click <strong>"More info"</strong> to reveal additional options, then click the <strong>"Run anyway"</strong> button that appears.</p>
-            <img src="images/Windows_warning.png" alt="Windows Security Warning" class="step-image">
+        <div class="steps-row">
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>UAC Permission</h4>
+              <p>Click <strong>"Yes"</strong> to allow installation.</p>
+              <img src="images/useraccountcontrol.jpg" alt="UAC" class="step-image">
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Choose Location</h4>
+              <p>Select install directory or keep default. Click <strong>Next</strong>.</p>
+              <img src="images/2selectDestinationLocation.png" alt="Location" class="step-image">
+            </div>
           </div>
         </div>
 
-        <div class="step-item">
-          <div class="step-number">Step 3</div>
-          <div class="step-content">
-            <h4>User Account Control Confirmation</h4>
-            <p>Windows User Account Control (UAC) will ask for permission. Click <strong>"Yes"</strong> to allow the installer to make changes to your device.</p>
-            <img src="images/useraccountcontrol.jpg" alt="User Account Control" class="step-image">
+        <div class="steps-row">
+          <div class="step-item">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h4>Start Menu Folder</h4>
+              <p>Choose folder or use default. Click <strong>Next</strong>.</p>
+              <img src="images/3Selectstartmenufolder.png" alt="Start Menu" class="step-image">
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h4>Desktop Icon</h4>
+              <p>Check box for desktop shortcut. Click <strong>Next</strong>.</p>
+              <img src="images/4createdesktopicon.png" alt="Desktop Icon" class="step-image">
+            </div>
           </div>
         </div>
 
-        <div class="step-item">
-          <div class="step-number">Step 4</div>
-          <div class="step-content">
-            <h4>Select Destination Location</h4>
-            <p>The setup wizard will start. Choose where you want to install KeyBase or keep the default location (<code>C:\Program Files\KeyBase</code>). Click <strong>Next</strong> to continue.</p>
-            <img src="images/2selectDestinationLocation.png" alt="Select Destination Location" class="step-image">
+        <div class="steps-row">
+          <div class="step-item">
+            <div class="step-number">7</div>
+            <div class="step-content">
+              <h4>Ready to Install</h4>
+              <p>Review settings and click <strong>Install</strong>.</p>
+              <img src="images/5readytoinstall.png" alt="Ready" class="step-image">
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">8</div>
+            <div class="step-content">
+              <h4>Installing</h4>
+              <p>Wait for installation to complete.</p>
+              <img src="images/6installing.png" alt="Installing" class="step-image">
+            </div>
           </div>
         </div>
 
-        <div class="step-item">
-          <div class="step-number">Step 5</div>
-          <div class="step-content">
-            <h4>Select Start Menu Folder</h4>
-            <p>Choose the Start Menu folder where shortcuts will be created, or use the default "KeyBase" folder. Click <strong>Next</strong>.</p>
-            <img src="images/3Selectstartmenufolder.png" alt="Select Start Menu Folder" class="step-image">
+        <div class="steps-row">
+          <div class="step-item">
+            <div class="step-number">9</div>
+            <div class="step-content">
+              <h4>Complete!</h4>
+              <p>Check "Launch KeyBase" and click <strong>Finish</strong>.</p>
+              <img src="images/7installationcomplete.png" alt="Complete" class="step-image">
+            </div>
           </div>
-        </div>
 
-        <div class="step-item">
-          <div class="step-number">Step 6</div>
-          <div class="step-content">
-            <h4>Create Desktop Icon (Optional)</h4>
-            <p>Choose whether to create a desktop shortcut for quick access. Check the box if you want a desktop icon, then click <strong>Next</strong>.</p>
-            <img src="images/4createdesktopicon.png" alt="Create Desktop Icon" class="step-image">
-          </div>
-        </div>
-
-        <div class="step-item">
-          <div class="step-number">Step 7</div>
-          <div class="step-content">
-            <h4>Ready to Install</h4>
-            <p>Review your installation settings. If everything looks good, click <strong>Install</strong> to begin the installation process.</p>
-            <img src="images/5readytoinstall.png" alt="Ready to Install" class="step-image">
-          </div>
-        </div>
-
-        <div class="step-item">
-          <div class="step-number">Step 8</div>
-          <div class="step-content">
-            <h4>Installing KeyBase</h4>
-            <p>The installer will copy files to your computer. This may take a minute or two. Wait for the progress bar to complete.</p>
-            <img src="images/6installing.png" alt="Installing KeyBase" class="step-image">
-          </div>
-        </div>
-
-        <div class="step-item">
-          <div class="step-number">Step 9</div>
-          <div class="step-content">
-            <h4>Installation Complete!</h4>
-            <p>Installation is finished! You can choose to launch KeyBase immediately by keeping the checkbox selected. Click <strong>Finish</strong> to complete the setup.</p>
-            <img src="images/7installationcomplete.png" alt="Installation Complete" class="step-image">
-          </div>
-        </div>
-
-        <div class="step-item">
-          <div class="step-number">Step 10</div>
-          <div class="step-content">
-            <h4>Start Using KeyBase!</h4>
-            <p>KeyBase is now installed and ready to use! Launch it from the Start Menu, desktop shortcut, or the launch checkbox. The main window will appear where you can start adding customer records with fast keyboard navigation.</p>
-            <img src="images/home.png" alt="KeyBase Main Window" class="step-image">
+          <div class="step-item">
+            <div class="step-number">10</div>
+            <div class="step-content">
+              <h4>Start Using KeyBase!</h4>
+              <p>Add records, capture images, and track sales with ease.</p>
+              <img src="images/home.png" alt="KeyBase" class="step-image">
+            </div>
           </div>
         </div>
       </div>

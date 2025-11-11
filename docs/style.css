@@ -249,6 +249,20 @@ body {
   border-left: 4px solid var(--primary);
 }
 
+.feature-highlight {
+  border-left: 4px solid #14b8a6;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+}
+
+.feature-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 16px;
+  box-shadow: 0 4px 12px var(--shadow);
+  border: 1px solid var(--border);
+}
+
 .feature-item h3 {
   font-size: 20px;
   margin-bottom: 16px;
@@ -717,24 +731,30 @@ html {
   text-align: center;
 }
 
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
 .step-item {
   display: flex;
-  gap: 24px;
-  margin-bottom: 50px;
+  gap: 16px;
   align-items: flex-start;
 }
 
 .step-number {
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   box-shadow: 0 4px 12px var(--shadow-lg);
 }
@@ -742,23 +762,23 @@ html {
 .step-content {
   flex: 1;
   background: white;
-  padding: 28px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--shadow);
   border: 1px solid var(--border);
 }
 
 .step-content h4 {
-  font-size: 22px;
+  font-size: 18px;
   color: var(--text);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .step-content p {
   color: var(--text-muted);
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
 }
 
 .step-content a {
@@ -767,17 +787,14 @@ html {
 }
 
 .step-image {
-  max-width: 600px;
+  max-width: 100%;
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px var(--shadow);
-  margin-top: 16px;
-  margin-bottom: 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px var(--shadow);
+  margin-top: 12px;
   border: 1px solid var(--border);
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Post-Install Section */
@@ -843,14 +860,18 @@ html {
 
 /* Responsive adjustments for installation guide */
 @media (max-width: 768px) {
+  .steps-row {
+    grid-template-columns: 1fr;
+  }
+  
   .step-item {
     flex-direction: column;
     align-items: center;
   }
   
   .step-number {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     font-size: 18px;
   }
   
