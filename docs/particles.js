@@ -34,21 +34,23 @@ class ParticleFlow {
   
   resize() {
     this.canvas.width = window.innerWidth;
-    this.canvas.height = document.documentElement.scrollHeight;
+    this.canvas.height = Math.max(document.documentElement.scrollHeight, window.innerHeight);
+    this.canvas.style.width = '100%';
+    this.canvas.style.height = '100%';
   }
   
   createParticles() {
-    const particleCount = Math.min(80, Math.floor((window.innerWidth * window.innerHeight) / 15000));
+    const particleCount = Math.min(100, Math.floor((window.innerWidth * window.innerHeight) / 10000));
     
     for (let i = 0; i < particleCount; i++) {
       this.particles.push({
         x: Math.random() * this.canvas.width,
         y: Math.random() * this.canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        radius: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.2,
-        hue: Math.random() * 60 + 170 // Cyan/Blue range
+        vx: (Math.random() - 0.5) * 1.2,
+        vy: (Math.random() - 0.5) * 1.2,
+        radius: Math.random() * 3 + 2,
+        opacity: Math.random() * 0.6 + 0.4,
+        hue: Math.random() * 40 + 180 // Cyan/Blue range
       });
     }
   }
@@ -94,11 +96,14 @@ class ParticleFlow {
       if (particle.y < 0) particle.y = this.canvas.height;
       if (particle.y > this.canvas.height) particle.y = 0;
       
-      // Draw particle
+      // Draw particle with glow
       this.ctx.beginPath();
       this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-      this.ctx.fillStyle = `hsla(${particle.hue}, 70%, 60%, ${particle.opacity})`;
+      this.ctx.fillStyle = `hsla(${particle.hue}, 80%, 65%, ${particle.opacity})`;
+      this.ctx.shadowBlur = 10;
+      this.ctx.shadowColor = `hsla(${particle.hue}, 80%, 65%, ${particle.opacity * 0.8})`;
       this.ctx.fill();
+      this.ctx.shadowBlur = 0;
       
       // Draw connections
       for (let j = i + 1; j < this.particles.length; j++) {
@@ -107,13 +112,13 @@ class ParticleFlow {
         const dy = particle.y - other.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        if (distance < 120) {
+        if (distance < 150) {
           this.ctx.beginPath();
           this.ctx.moveTo(particle.x, particle.y);
           this.ctx.lineTo(other.x, other.y);
-          const opacity = (1 - distance / 120) * 0.15;
-          this.ctx.strokeStyle = `hsla(${particle.hue}, 70%, 60%, ${opacity})`;
-          this.ctx.lineWidth = 0.5;
+          const opacity = (1 - distance / 150) * 0.3;
+          this.ctx.strokeStyle = `hsla(${particle.hue}, 80%, 65%, ${opacity})`;
+          this.ctx.lineWidth = 1;
           this.ctx.stroke();
         }
       }
