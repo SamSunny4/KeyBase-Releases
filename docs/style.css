@@ -1,14 +1,14 @@
 /* KeyBase - Modern Professional Theme */
 
 :root {
-  --primary: #2563eb;       /* Vibrant Royal Blue */
-  --primary-dark: #1d4ed8;
-  --primary-light: #60a5fa;
-  --accent: #0ea5e9;        /* Sky Blue */
-  --bg: #f1f5f9;            /* Light Slate Background */
+  --primary: #0891b2;       /* Cyan 600 - Darker Cyan for primary actions */
+  --primary-dark: #0e7490;  /* Cyan 700 */
+  --primary-light: #22d3ee; /* Cyan 400 */
+  --accent: #06b6d4;        /* Cyan 500 */
+  --bg: #f8fafc;            /* Slate 50 */
   --bg-card: #ffffff;
-  --text: #0f172a;          /* Dark Slate */
-  --text-muted: #64748b;
+  --text: #0f172a;          /* Slate 900 */
+  --text-muted: #64748b;    /* Slate 500 */
   --border: #e2e8f0;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -239,6 +239,7 @@ body {
   grid-column: 1 / -1; /* Full width */
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: white;
+  padding: 24px; /* Reduced padding */
 }
 
 .feature-highlight h3 {
@@ -252,6 +253,7 @@ body {
 
 .feature-preview {
   width: 100%;
+  max-width: 500px; /* Limit width to make it smaller */
   border-radius: 8px;
   margin-top: 24px;
   box-shadow: var(--shadow-lg);
@@ -399,6 +401,20 @@ kbd {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
   margin-bottom: 40px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: white;
+  padding: 2px;
 }
 
 .footer-brand p {
