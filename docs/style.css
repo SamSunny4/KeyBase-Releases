@@ -29,47 +29,24 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  position: relative;
-}
-
-/* Particle Canvas */
-#particle-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 1;
-}
-
-.site-header {
-  position: sticky;
-  z-index: 100;
-}
-
-.hero,
-main,
-footer {
-  position: relative;
-  z-index: 1;
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 24px;
 }
 
 /* --- Header --- */
 .site-header {
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
   border-bottom: 1px solid var(--border);
   padding: 16px 0;
   position: sticky;
   top: 0;
+  z-index: 100;
   backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .header-content {
@@ -120,17 +97,38 @@ footer {
 
 /* --- Hero Section --- */
 .hero {
-  background: white;
-  padding: 120px 0 100px;
+  background: radial-gradient(circle at top center, rgba(8, 145, 178, 0.3), transparent 60%), #ffffff;
+  padding: 100px 0 80px;
   text-align: center;
   border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.particle-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.particle-layer canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .hero h2 {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: 28px;
+  line-height: 1.1;
+  margin-bottom: 24px;
   background: linear-gradient(to right, var(--primary-dark), var(--accent));
   background-clip: text;
   -webkit-background-clip: text;
@@ -139,11 +137,11 @@ footer {
 }
 
 .hero-subtitle {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--text-muted);
-  max-width: 800px;
-  margin: 0 auto 48px;
-  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
 }
 
 .cta-buttons {
@@ -187,17 +185,17 @@ footer {
 /* --- Highlights (Overview) --- */
 .highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
-  margin-top: -50px; /* Overlap hero */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: -40px; /* Overlap hero */
   position: relative;
   z-index: 10;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .highlight-card {
   background: white;
-  padding: 32px 28px;
+  padding: 24px;
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   text-align: center;
@@ -233,43 +231,59 @@ footer {
 
 /* --- Features --- */
 .content-section {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .content-section h2 {
-  font-size: 38px;
+  font-size: 32px;
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
 }
 
 .feature-item {
   background: white;
-  padding: 40px;
+  padding: 32px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
 }
 
+.feature-highlight {
+  grid-column: 1 / -1; /* Full width */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 24px; /* Reduced padding */
+}
+
+.feature-highlight h3 {
+  color: white;
+}
+
+.feature-highlight p {
+  color: #cbd5e1;
+  max-width: 600px;
+}
+
 .feature-preview {
   width: 100%;
-  max-width: 100%;
+  max-width: 500px; /* Limit width to make it smaller */
   border-radius: 8px;
-  margin-top: 16px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
+  margin-top: 24px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .feature-item h3 {
-  font-size: 22px;
-  margin-bottom: 16px;
+  font-size: 20px;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -277,8 +291,7 @@ footer {
 
 .feature-item p {
   color: var(--text-muted);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 15px;
 }
 
 kbd {
