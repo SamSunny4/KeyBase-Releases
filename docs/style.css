@@ -29,6 +29,27 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.site-header,
+.hero,
+main,
+footer {
+  position: relative;
+  z-index: 2;
 }
 
 .container {
@@ -235,29 +256,13 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
-.feature-highlight {
-  grid-column: 1 / -1; /* Full width */
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: white;
-  padding: 24px; /* Reduced padding */
-}
-
-.feature-highlight h3 {
-  color: white;
-}
-
-.feature-highlight p {
-  color: #cbd5e1;
-  max-width: 600px;
-}
-
 .feature-preview {
   width: 100%;
-  max-width: 500px; /* Limit width to make it smaller */
+  max-width: 100%;
   border-radius: 8px;
-  margin-top: 24px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255,255,255,0.1);
+  margin-top: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }
 
 .feature-item h3 {
