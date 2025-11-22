@@ -8,6 +8,9 @@
   <link rel="icon" type="image/png" href="images/splash.png">
 </head>
 <body>
+  <div class="particle-surface" aria-hidden="true">
+    <canvas id="particle-canvas"></canvas>
+  </div>
   <header class="site-header">
     <div class="container header-content">
       <div class="logo-section">
@@ -28,14 +31,11 @@
   </header>
 
   <section class="hero">
-    <div class="particle-layer" aria-hidden="true">
-      <canvas id="particle-canvas"></canvas>
-    </div>
     <div class="container">
       <h2>The Ultimate Key Shop Management System</h2>
       <p class="hero-subtitle">Streamline operations, track sales, and manage customers with one powerful, easy-to-use desktop app.</p>
       <div class="cta-buttons">
-        <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/download/v4.0.0/KeyBase" class="btn btn-primary">Download Now (Free)</a>
+        <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/download/v4.0.0/KeyBase-Setup.exe" class="btn btn-primary">Download Now (Free)</a>
         <a href="#features" class="btn btn-secondary">Explore Features</a>
       </div>
     </div>
@@ -71,10 +71,9 @@
       <h2>Everything You Need</h2>
       
       <div class="feature-grid">
-        <div class="feature-item feature-highlight">
+        <div class="feature-item">
           <h3>📈 Smart Sales Analytics</h3>
           <p>Visualize your success with interactive charts. Track daily, monthly, and yearly performance at a glance.</p>
-          <img src="images/keystatistics.png" alt="Sales Analytics Dashboard" class="feature-preview">
         </div>
 
         <div class="feature-item">
@@ -95,7 +94,6 @@
         <div class="feature-item">
           <h3>🔎 Instant Search</h3>
           <p>Find any record instantly. Filter by date, key type, or payment status.</p>
-          <img src="images/searchrecord.png" alt="Search Records" class="feature-preview" style="margin-top: 16px;">
         </div>
 
         <div class="feature-item">
@@ -111,7 +109,7 @@
         <div class="download-card">
           <h3>🚀 Download KeyBase</h3>
           <p>Compatible with Windows 10/11 (64-bit)</p>
-          <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/download/v4.0.0/KeyBase" class="btn btn-primary">Download Installer (.exe)</a>
+          <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/download/v4.0.0/KeyBase-Setup.exe" class="btn btn-primary">Download Installer (.exe)</a>
           <p class="system-req" style="margin-top: 10px;">Includes everything you need. No Java installation required.</p>
         </div>
       </div>
@@ -247,13 +245,12 @@
       }
 
       const ctx = canvas.getContext('2d');
-      const particleLayer = canvas.parentElement;
       const pointer = { x: null, y: null };
       const config = {
-        baseCount: window.matchMedia('(min-width: 768px)').matches ? 55 : 30,
-        maxVelocity: 0.35,
-        linkDistance: 140,
-        pointerRadius: 120
+        baseCount: window.matchMedia('(min-width: 768px)').matches ? 60 : 34,
+        maxVelocity: 0.55,
+        linkDistance: 150,
+        pointerRadius: 140
       };
 
       let particles = [];
@@ -275,12 +272,11 @@
 
       const resize = () => {
         cancelAnimationFrame(animationFrame);
-        const rect = particleLayer.getBoundingClientRect();
         const dpr = window.devicePixelRatio || 1;
-        canvasWidth = rect.width;
-        canvasHeight = rect.height;
-        canvas.width = rect.width * dpr;
-        canvas.height = rect.height * dpr;
+        canvasWidth = window.innerWidth;
+        canvasHeight = window.innerHeight;
+        canvas.width = canvasWidth * dpr;
+        canvas.height = canvasHeight * dpr;
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.scale(dpr, dpr);
         initParticles();
@@ -288,7 +284,7 @@
       };
 
       const initParticles = () => {
-        const densityMultiplier = Math.min(canvasWidth * canvasHeight / 60000, 1.8);
+        const densityMultiplier = Math.min(canvasWidth * canvasHeight / 80000, 2.2);
         const count = Math.round(config.baseCount * densityMultiplier);
         particles = Array.from({ length: count }, createParticle);
       };
@@ -360,23 +356,12 @@
         animationFrame = requestAnimationFrame(animate);
       };
 
-      window.addEventListener('pointermove', (event) => {
-        const rect = canvas.getBoundingClientRect();
-        if (
-          event.clientX >= rect.left &&
-          event.clientX <= rect.right &&
-          event.clientY >= rect.top &&
-          event.clientY <= rect.bottom
-        ) {
-          pointer.x = event.clientX - rect.left;
-          pointer.y = event.clientY - rect.top;
-        } else {
-          pointer.x = null;
-          pointer.y = null;
-        }
+      document.body.addEventListener('pointermove', (event) => {
+        pointer.x = event.clientX;
+        pointer.y = event.clientY;
       });
 
-      window.addEventListener('pointerleave', () => {
+      document.body.addEventListener('pointerleave', () => {
         pointer.x = null;
         pointer.y = null;
       });
