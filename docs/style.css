@@ -59,7 +59,7 @@ footer {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* --- Header --- */
@@ -121,16 +121,16 @@ footer {
 /* --- Hero Section --- */
 .hero {
   background: white;
-  padding: 100px 0 80px;
+  padding: 120px 0 100px;
   text-align: center;
   border-bottom: 1px solid var(--border);
 }
 
 .hero h2 {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 24px;
+  line-height: 1.15;
+  margin-bottom: 28px;
   background: linear-gradient(to right, var(--primary-dark), var(--accent));
   background-clip: text;
   -webkit-background-clip: text;
@@ -139,11 +139,11 @@ footer {
 }
 
 .hero-subtitle {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--text-muted);
-  max-width: 700px;
-  margin: 0 auto 40px;
-  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
 }
 
 .cta-buttons {
@@ -187,17 +187,17 @@ footer {
 /* --- Highlights (Overview) --- */
 .highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-  margin-top: -40px; /* Overlap hero */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: -50px; /* Overlap hero */
   position: relative;
   z-index: 10;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 
 .highlight-card {
   background: white;
-  padding: 24px;
+  padding: 32px 28px;
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   text-align: center;
@@ -233,26 +233,26 @@ footer {
 
 /* --- Features --- */
 .content-section {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 .content-section h2 {
-  font-size: 32px;
+  font-size: 38px;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
 }
 
 .feature-item {
   background: white;
-  padding: 32px;
+  padding: 40px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
@@ -268,8 +268,8 @@ footer {
 }
 
 .feature-item h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: 22px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -277,7 +277,8 @@ footer {
 
 .feature-item p {
   color: var(--text-muted);
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 kbd {
