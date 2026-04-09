@@ -35,7 +35,7 @@
       <h2>The Ultimate Key Shop Management System</h2>
       <p class="hero-subtitle">Streamline operations, track sales, and manage customers with one powerful, easy-to-use desktop app.</p>
       <div class="cta-buttons">
-        <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/download/v4.0.0/KeyBase-Setup.exe" class="btn btn-primary">Download Now (Free)</a>
+        <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/download/v4.2/KeyBase-Setup.exe" class="btn btn-primary">Download Now (Free)</a>
         <a href="#features" class="btn btn-secondary">Explore Features</a>
       </div>
     </div>
@@ -109,7 +109,7 @@
         <div class="download-card">
           <h3>🚀 Download KeyBase</h3>
           <p>Compatible with Windows 10/11 (64-bit)</p>
-          <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/download/v4.0.0/KeyBase-Setup.exe" class="btn btn-primary">Download Installer (.exe)</a>
+          <a href="https://github.com/SamSunny4/KeyBase-Releases/releases/download/v4.2/KeyBase-Setup.exe" class="btn btn-primary">Download Installer (.exe)</a>
           <p class="system-req" style="margin-top: 10px;">Includes everything you need. No Java installation required.</p>
         </div>
       </div>
@@ -450,6 +450,34 @@
       window.addEventListener('resize', resize);
       resize();
     })();
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const elementsToReveal = document.querySelectorAll(
+        '.highlight-card, .feature-item, .download-card, .step-item, .doc-card, .safety-notice'
+      );
+
+      elementsToReveal.forEach((el, index) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = `${(index % 3) * 150}ms`;
+        observer.observe(el);
+      });
+    });
   </script>
 </body>
 </html>
